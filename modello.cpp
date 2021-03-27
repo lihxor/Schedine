@@ -4,7 +4,8 @@ persistence 12.
 */
 #include <iostream>
 #include <cstdlib>
-using namespace std;
+#include "C:\Users\Lorenzo\Documents\Atom\Schedine\libxl-3.9.4.3\include_cpp\libxl.h"
+using namespace libxl;
 
 
 
@@ -69,17 +70,17 @@ void result(int a)
 {
   if(a<0)
   {
-    cout<<endl<<"Risultato probabile: 2"<<endl;
+    std::cout<<std::endl<<"Risultato probabile: 2"<<std::endl;
   }
   else
   {
     if(a>0)
     {
-      cout<<endl<<"Risultato probabile: 1"<<endl;
+      std::cout<<std::endl<<"Risultato probabile: 1"<<std::endl;
     }
     else
     {
-      cout<<endl<<"Risultato probabile: X"<<endl;
+      std::cout<<std::endl<<"Risultato probabile: X"<<std::endl;
     }
   }
 }
@@ -100,18 +101,18 @@ int main()
   int gol_s_1=0; //Gol subiti dalla prima squadra
   int gol_f_2=0; //Gol fatti dalla seconda squadra
   int gol_s_2=0; //Gol subiti dalla seconda squadra
-  cout<<"Inserire classifica prima squadra"<<std::endl;
-  cin>>val_1;
-  cout<<"Inserire gol fatti prima squadra"<<std::endl;
-  cin>>gol_f_1;
-  cout<<"Inserire gol subiti prima squadra"<<std::endl;
-  cin>>gol_s_1;
-  cout<<"Inserire classifica seconda squadra"<<std::endl;
-  cin>>val_2;
-  cout<<"Inserire gol fatti seconda squadra"<<std::endl;
-  cin>>gol_f_2;
-  cout<<"Inserire gol subiti seconda squadra"<<std::endl;
-  cin>>gol_s_2;
+  std::cout<<"Inserire classifica prima squadra"<<std::endl;
+  std::cin>>val_1;
+  std::cout<<"Inserire gol fatti prima squadra"<<std::endl;
+  std::cin>>gol_f_1;
+  std::cout<<"Inserire gol subiti prima squadra"<<std::endl;
+  std::cin>>gol_s_1;
+  std::cout<<"Inserire classifica seconda squadra"<<std::endl;
+  std::cin>>val_2;
+  std::cout<<"Inserire gol fatti seconda squadra"<<std::endl;
+  std::cin>>gol_f_2;
+  std::cout<<"Inserire gol subiti seconda squadra"<<std::endl;
+  std::cin>>gol_s_2;
 
 
 
@@ -173,10 +174,10 @@ int main()
     tot_1+=squad_2[i];
   }
   */
-  cout<<"Valore squadra 1:"<<std::endl;
-  cin>>perfm_1;
-  cout<<"Valore squadra 2:"<<std::endl;
-  cin>>perfm_2;
+  std::cout<<"Valore squadra 1:"<<std::endl;
+  std::cin>>perfm_1;
+  std::cout<<"Valore squadra 2:"<<std::endl;
+  std::cin>>perfm_2;
   diff_v=val_1 - val_2;
   compute(diff_v);
   diff_f=gol_f_1 - gol_f_2;
